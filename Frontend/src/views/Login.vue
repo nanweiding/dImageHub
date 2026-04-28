@@ -27,6 +27,10 @@ const loading = ref(false)
 const error = ref('')
 
 const handleLogin = async () => {
+  if (form.value.username.length < 3 || form.value.password.length < 6) {
+    error.value = '用户名至少3字符，密码至少6字符'
+    return
+  }
   loading.value = true
   error.value = ''
   try {

@@ -14,7 +14,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/images")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "${app.cors.allowed-origins:*}")
 public class ImageController {
 
     private final ImageService imageService;
@@ -40,7 +40,6 @@ public class ImageController {
             response.put("image", Map.of(
                 "id", image.getId(),
                 "originalFilename", image.getOriginalFilename(),
-                "storedFilename", image.getStoredFilename(),
                 "fileSize", image.getFileSize(),
                 "contentType", image.getContentType(),
                 "url", "/api/images/" + image.getId()
@@ -75,7 +74,6 @@ public class ImageController {
             response.put("image", Map.of(
                 "id", image.getId(),
                 "originalFilename", image.getOriginalFilename(),
-                "storedFilename", image.getStoredFilename(),
                 "filePath", image.getFilePath(),
                 "fileSize", image.getFileSize(),
                 "contentType", image.getContentType()

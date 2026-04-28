@@ -1,18 +1,32 @@
 <template>
-  <div class="auth-container">
-    <h2>登录</h2>
-    <form @submit.prevent="handleLogin">
-      <div class="form-group">
-        <label>用户名</label>
-        <input v-model="form.username" type="text" required />
+  <div class="auth-page">
+    <div class="auth-card">
+      <div class="auth-header">
+        <i class="fas fa-sign-in-alt auth-icon"></i>
+        <h1>登录账户</h1>
+        <p>欢迎回来！请登录您的账户</p>
       </div>
-      <div class="form-group">
-        <label>密码</label>
-        <input v-model="form.password" type="password" required />
+
+      <form @submit.prevent="handleLogin" class="auth-form">
+        <div class="form-group">
+          <label><i class="fas fa-user"></i> 用户名</label>
+          <input v-model="form.username" type="text" placeholder="输入用户名" required />
+        </div>
+        <div class="form-group">
+          <label><i class="fas fa-lock"></i> 密码</label>
+          <input v-model="form.password" type="password" placeholder="输入密码" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" :disabled="loading">
+          <i v-if="loading" class="fas fa-spinner fa-spin"></i>
+          <span v-else><i class="fas fa-sign-in-alt"></i> 登录</span>
+        </button>
+        <p v-if="error" class="error"><i class="fas fa-exclamation-circle"></i> {{ error }}</p>
+      </form>
+
+      <div class="auth-footer">
+        <p>还没有账户？ <router-link to="/register">立即注册</router-link></p>
       </div>
-      <button type="submit" :disabled="loading">{{ loading ? '登录中...' : '登录' }}</button>
-      <p v-if="error" class="error">{{ error }}</p>
-    </form>
+    </div>
   </div>
 </template>
 
@@ -51,10 +65,85 @@ const handleLogin = async () => {
 </script>
 
 <style scoped>
-.auth-container { max-width: 400px; margin: 0 auto; }
-.form-group { margin-bottom: 1rem; }
-.form-group label { display: block; margin-bottom: 0.5rem; }
-.form-group input { width: 100%; padding: 0.5rem; font-size: 1rem; }
-button { width: 100%; padding: 0.75rem; background: #1890ff; color: white; border: none; cursor: pointer; }
-.error { color: red; margin-top: 1rem; text-align: center; }
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  background: var(--body-empty);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-header { text-align: center; margin-bottom: 2rem; }
+
+.auth-icon { font-size: 3rem; color: var(--color-accent); margin-bottom: 1rem; }
+
+.auth-header h1 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+
+.auth-header p { color: var(--body-text-subtle); font-size: 0.9rem; }
+
+.auth-form { display: flex; flex-direction: column; gap: 1.25rem; }
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--body-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-group label .fa-user, .form-group label .fa-lock { color: var(--color-accent); }
+
+.form-group input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--body-text);
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-group input::placeholder { color: var(--input-placeholder); }
+
+.btn-block { width: 100%; padding: 0.875rem; font-size: 1rem; margin-top: 0.5rem; }
+
+.error {
+  color: #ff6b6b;
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.auth-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: var(--body-text-subtle);
+  font-size: 0.9rem;
+}
+
+.auth-footer a { color: var(--color-accent); text-decoration: none; }
+.auth-footer a:hover { text-decoration: underline; }
 </style>

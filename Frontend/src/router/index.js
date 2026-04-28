@@ -14,20 +14,16 @@ const router = createRouter({
   routes
 })
 
-// Navigation guard for auth protection
 router.beforeEach((to, from, next) => {
   const isLoggedIn = !!localStorage.getItem('userId')
 
-  // Allow access to login and register routes
   if (to.path === '/login' || to.path === '/register') {
-    // If already logged in, redirect to home
     if (isLoggedIn) {
       next('/')
     } else {
       next()
     }
   } else {
-    // For other routes, require auth
     if (isLoggedIn) {
       next()
     } else {

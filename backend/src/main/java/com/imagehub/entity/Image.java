@@ -1,10 +1,12 @@
 package com.imagehub.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
-@Data
+@Getter @Setter
 @Entity
 @Table(name = "images")
 public class Image {
@@ -33,8 +35,20 @@ public class Image {
     @Column(name = "upload_time")
     private LocalDateTime uploadTime;
 
-    @PrePersist
+@PrePersist
     protected void onCreate() {
         uploadTime = LocalDateTime.now();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Image image)) return false;
+        return id != null && Objects.equals(id, image.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }

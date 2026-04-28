@@ -2,10 +2,12 @@ package com.imagehub.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
-@Data
+@Getter @Setter
 @Entity
 @Table(name = "users")
 public class User {
@@ -27,5 +29,17 @@ public class User {
     @PrePersist
     protected void onCreate() {
         createdAt = LocalDateTime.now();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof User user)) return false;
+        return id != null && Objects.equals(id, user.id);
+    }
+
+    @Override
+    public int hashCode() {
+        return getClass().hashCode();
     }
 }

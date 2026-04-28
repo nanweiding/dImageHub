@@ -9,6 +9,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.MultipartFile;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,6 +22,8 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class ImageServiceImpl implements ImageService {
+
+    private static final Logger log = LoggerFactory.getLogger(ImageServiceImpl.class);
 
     private final ImageRepository imageRepository;
 
@@ -77,7 +82,7 @@ public class ImageServiceImpl implements ImageService {
             Path filePath = Paths.get(image.getFilePath());
             Files.deleteIfExists(filePath);
         } catch (IOException e) {
-            // 文件删除失败不影响数据库记录删除
+            log.error("Failed to delete file: {}", image.getFilePath(), e);
         }
 
         imageRepository.delete(image);

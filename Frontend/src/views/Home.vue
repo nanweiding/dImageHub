@@ -1485,7 +1485,7 @@ onMounted(() => {
   width: 160px;
   height: 120px;
   background: #ffffff;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -1639,7 +1639,7 @@ onMounted(() => {
   height: 36px;
   border-radius: 50%;
   background: transparent;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   color: var(--text-secondary);
   cursor: pointer;
   display: flex;
@@ -1717,7 +1717,7 @@ onMounted(() => {
   align-items: center;
   gap: 12px;
   padding: 10px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .selected-file-item:last-child { border-bottom: none; }
@@ -1808,7 +1808,7 @@ onMounted(() => {
   gap: 8px;
   padding: 8px 16px;
   background: var(--bg-elevated);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 980px;
   min-width: 200px;
 }
@@ -1833,7 +1833,7 @@ onMounted(() => {
 
 .sort-select {
   padding: 8px 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 980px;
   background: var(--bg-elevated);
   color: var(--text-primary);
@@ -1848,7 +1848,7 @@ onMounted(() => {
 
 .filter-select {
   padding: 8px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   background: var(--bg-elevated);
   color: var(--text-primary);
@@ -2002,7 +2002,8 @@ onMounted(() => {
 }
 
 /* Images Section */
-.images-section {}
+.images-section {
+}
 
 .folder-actions {
   display: flex;
@@ -2175,7 +2176,7 @@ onMounted(() => {
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal-header h3 {
@@ -2209,7 +2210,7 @@ onMounted(() => {
   gap: 12px;
   justify-content: flex-end;
   padding: 24px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-color);
 }
 
 .folder-list {
@@ -2261,7 +2262,7 @@ onMounted(() => {
 
 .trash-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s;
@@ -2453,7 +2454,7 @@ onMounted(() => {
 .image-tag.more {
   background: var(--bg-elevated);
   color: var(--text-tertiary);
-  border-color: var(--border);
+  border-color: var(--border-color);
 }
 
 /* Tag Modal */
@@ -2531,7 +2532,7 @@ onMounted(() => {
 .modal textarea {
   width: 100%;
   padding: 12px 16px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   font-size: 0.9rem;
   color: var(--text-primary);

@@ -148,7 +148,7 @@ const handleRegister = async () => {
   width: 100%;
   padding: 16px;
   background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   color: var(--text-primary);
   font-size: 1rem;

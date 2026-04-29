@@ -75,7 +75,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import api, { userAPI, storageAPI } from '../../api'
+import api, { userAPI } from '../../api'
 
 const router = useRouter()
 

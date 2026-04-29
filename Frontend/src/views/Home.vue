@@ -1414,7 +1414,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   padding: 80px 24px;
-  background: linear-gradient(180deg, #ffffff 0%, #f5f5f7 50%, #ffffff 100%);
+  background: linear-gradient(180deg, #1E3A5F 0%, #3B7DDD 50%, #F5F7FA 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1443,7 +1443,7 @@ onMounted(() => {
   line-height: 1.05;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
-  color: var(--text-primary);
+  color: #fff;
 }
 
 .headline-icon {
@@ -1454,7 +1454,7 @@ onMounted(() => {
 
 .hero-subheadline {
   font-size: 1.5rem;
-  color: var(--text-secondary);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.4;
   margin-bottom: 40px;
 }
@@ -1484,9 +1484,9 @@ onMounted(() => {
 .floating-card {
   width: 160px;
   height: 120px;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.95);
   border: 1px solid var(--border-color);
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   display: flex;

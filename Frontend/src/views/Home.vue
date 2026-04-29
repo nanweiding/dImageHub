@@ -2155,30 +2155,14 @@ onMounted(() => {
 
 /* Modal */
 .modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 3000;
-  animation: fadeIn 0.2s ease;
+  background: rgba(30, 58, 95, 0.7);
+  backdrop-filter: blur(8px);
 }
 
 .modal {
-  background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: 24px;
-  width: 100%;
-  max-width: 440px;
-  margin: 24px;
-  overflow: hidden;
-  animation: slideUp 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
 }
 
 @keyframes slideUp {
@@ -2214,8 +2198,8 @@ onMounted(() => {
 }
 
 .modal-close:hover {
-  background: var(--text-primary);
-  color: var(--bg-primary);
+  background: var(--color-secondary);
+  color: #fff;
 }
 
 .modal-body { padding: 24px; }
@@ -2260,9 +2244,7 @@ onMounted(() => {
 
 /* Trash Section */
 .trash-section {
-  margin-top: 48px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--border-color);
 }
 
 .trash-actions {

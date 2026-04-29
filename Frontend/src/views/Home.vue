@@ -2390,7 +2390,7 @@ onMounted(() => {
 
 /* Tags Section */
 .tags-section {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .empty-tags {

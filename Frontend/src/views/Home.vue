@@ -1414,7 +1414,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   padding: 80px 24px;
-  background: linear-gradient(180deg, #1E3A5F 0%, #3B7DDD 50%, #F5F7FA 100%);
+  background: linear-gradient(180deg, #1E3A5F 0%, #3B7DDD 100%);
   position: relative;
   overflow: hidden;
 }

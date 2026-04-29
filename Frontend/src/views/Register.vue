@@ -91,15 +91,19 @@ const handleRegister = async () => {
 
 <style scoped>
 .auth-page {
-  min-height: calc(100vh - 48px);
+  background: linear-gradient(135deg, #1E3A5F 0%, #3B7DDD 100%);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 60px 24px;
-  background: var(--bg-secondary);
 }
 
 .auth-container {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 48px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
   width: 100%;
   max-width: 400px;
 }
@@ -110,15 +114,8 @@ const handleRegister = async () => {
 }
 
 .auth-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0, 113, 227, 0.1) 0%, rgba(0, 212, 170, 0.1) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 24px;
-  color: var(--accent);
+  background: linear-gradient(135deg, rgba(59, 125, 221, 0.15) 0%, rgba(74, 158, 255, 0.15) 100%);
+  color: var(--color-secondary);
 }
 
 .auth-header h1 {

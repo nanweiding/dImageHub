@@ -111,4 +111,19 @@ export const tagAPI = {
   }
 }
 
+export const userAPI = {
+  getUserInfo(userId) {
+    return api.get(`/user/${userId}/info`)
+  },
+  updateUserInfo(userId, data) {
+    return api.put(`/user/${userId}`, data)
+  }
+}
+
+export const storageAPI = {
+  getStorageStats(userId) {
+    return api.get(`/user/${userId}/storage`)
+  }
+}
+
 export default api

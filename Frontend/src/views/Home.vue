@@ -2052,8 +2052,8 @@ onMounted(() => {
 .image-card {
   position: relative;
   background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
   overflow: hidden;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -2061,13 +2061,13 @@ onMounted(() => {
 
 .image-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-  border-color: var(--accent);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-secondary);
 }
 
 .image-card.selected {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(41, 151, 255, 0.3);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(59, 125, 221, 0.3);
 }
 
 .image-preview {
@@ -2136,7 +2136,7 @@ onMounted(() => {
 }
 
 .image-action:hover {
-  background: var(--accent);
+  background: var(--color-secondary);
   color: #fff;
 }
 
@@ -2146,25 +2146,9 @@ onMounted(() => {
 
 /* Image Checkbox */
 .image-checkbox {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  z-index: 10;
   opacity: 0;
-  transition: opacity 0.3s;
 }
-
-.image-card:hover .image-checkbox {
-  opacity: 1;
-}
-
-.image-checkbox input {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  accent-color: var(--accent);
-}
-
+.image-card:hover .image-checkbox,
 .image-card.selected .image-checkbox {
   opacity: 1;
 }

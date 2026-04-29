@@ -257,7 +257,7 @@ body {
   max-width: 980px;
   margin: 0 auto;
   padding: 0 22px;
-  height: 48px;
+  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -305,9 +305,6 @@ body {
 
 .nav-link:hover { color: #fff; }
 .nav-link.router-link-active { color: #fff; }
-.admin-link {
-  color: var(--accent) !important;
-}
 .admin-link i { margin-right: 4px; }
 
 .user-menu {

@@ -227,7 +227,7 @@ const formatDate = (dateStr) => {
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
   background-color: var(--bg-secondary);
-  color: var(--text-primary);
+  color: #fff;
   min-height: 100vh;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -267,7 +267,7 @@ body {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--text-primary);
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
@@ -376,8 +376,8 @@ body {
 
 .btn-secondary {
   background: var(--bg-elevated);
-  color: var(--text-primary);
-  border: 1px solid var(--border);
+  color: #fff;
+  border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
@@ -388,7 +388,7 @@ body {
 /* Cards */
 .card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 24px;
 }
@@ -408,9 +408,9 @@ body {
   width: 100%;
   padding: 14px 16px;
   background: var(--bg-secondary);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
-  color: var(--text-primary);
+  color: #fff;
   font-size: 1rem;
   transition: all 0.3s;
 }
@@ -534,7 +534,7 @@ body {
 
 .info-value {
   font-size: 0.9rem;
-  color: var(--text-primary);
+  color: #fff;
   font-weight: 500;
 }
 
@@ -582,12 +582,12 @@ body {
   text-align: center;
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: #fff;
 }
 
 .control-divider {
   width: 1px;
   height: 24px;
-  background: var(--border);
+  background: var(--border-color);
 }
 </style>

@@ -2002,8 +2002,6 @@ onMounted(() => {
 }
 
 /* Images Section */
-.images-section {
-}
 
 .folder-actions {
   display: flex;

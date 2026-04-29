@@ -1542,18 +1542,18 @@ onMounted(() => {
 
 .upload-zone {
   background: var(--bg-card);
-  border: 2px dashed var(--border);
-  border-radius: 24px;
+  border: 2px dashed var(--color-secondary);
+  border-radius: 16px;
   padding: 60px 40px;
   text-align: center;
   position: relative;
   transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.upload-zone:hover { border-color: var(--accent); }
+.upload-zone:hover { border-color: var(--color-hover); }
 .upload-zone.drag-over {
-  border-color: var(--accent);
-  background: rgba(41, 151, 255, 0.05);
+  border-color: var(--color-hover);
+  background: rgba(59, 125, 221, 0.05);
   transform: scale(1.01);
 }
 
@@ -1568,7 +1568,7 @@ onMounted(() => {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(0, 113, 227, 0.1) 0%, rgba(0, 212, 170, 0.1) 100%);
+  background: linear-gradient(135deg, rgba(59, 125, 221, 0.15) 0%, rgba(74, 158, 255, 0.15) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1577,7 +1577,7 @@ onMounted(() => {
 
 .upload-icon i {
   font-size: 2.5rem;
-  color: var(--accent);
+  color: var(--color-secondary);
 }
 
 .upload-title {
@@ -1940,40 +1940,29 @@ onMounted(() => {
 }
 
 .folder-card {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 20px;
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
-  cursor: pointer;
-  transition: all 0.3s;
+  padding: 20px;
 }
 
 .folder-card:hover {
-  border-color: var(--accent);
-  background: var(--bg-elevated);
+  border-color: var(--color-secondary);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .folder-card.active {
-  border-color: var(--accent);
-  background: rgba(41, 151, 255, 0.1);
+  border-color: var(--color-secondary);
+  background: rgba(59, 125, 221, 0.05);
 }
 
 .folder-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(0, 113, 227, 0.15) 0%, rgba(0, 212, 170, 0.15) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: linear-gradient(135deg, rgba(59, 125, 221, 0.15) 0%, rgba(74, 158, 255, 0.15) 100%);
 }
 
 .folder-icon i {
-  font-size: 1.5rem;
-  color: var(--accent);
+  color: var(--color-secondary);
 }
 
 .folder-info {
@@ -2424,24 +2413,18 @@ onMounted(() => {
 }
 
 .tag-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  background: var(--bg-elevated);
-  border: 1px solid var(--border);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
   border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s;
 }
 
 .tag-item:hover {
-  border-color: var(--accent);
+  border-color: var(--color-secondary);
 }
 
 .tag-item.active {
-  background: rgba(41, 151, 255, 0.1);
-  border-color: var(--accent);
+  background: rgba(59, 125, 221, 0.1);
+  border-color: var(--color-secondary);
 }
 
 .tag-color {

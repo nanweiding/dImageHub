@@ -171,7 +171,7 @@ onMounted(() => {
 
 .stat-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 24px;
   display: flex;
@@ -183,17 +183,26 @@ onMounted(() => {
   width: 56px;
   height: 56px;
   border-radius: 14px;
-  background: linear-gradient(135deg, rgba(0, 113, 227, 0.15) 0%, rgba(0, 212, 170, 0.15) 100%);
+  background: linear-gradient(135deg, rgba(59, 125, 221, 0.15) 0%, rgba(74, 158, 255, 0.15) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--color-secondary);
   font-size: 1.5rem;
 }
 
-.stat-icon.users { background: linear-gradient(135deg, rgba(48, 209, 88, 0.15) 0%, rgba(0, 212, 170, 0.15) 100%); color: var(--success); }
-.stat-icon.storage { background: linear-gradient(135deg, rgba(255, 149, 0, 0.15) 0%, rgba(255, 69, 58, 0.15) 100%); color: #ff9500; }
-.stat-icon.trash { background: linear-gradient(135deg, rgba(255, 69, 58, 0.15) 0%, rgba(255, 149, 0, 0.15) 100%); color: var(--error); }
+.stat-icon.users {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(74, 158, 255, 0.15) 100%);
+  color: var(--success);
+}
+.stat-icon.storage {
+  background: linear-gradient(135deg, rgba(255, 149, 0, 0.15) 0%, rgba(239, 68, 68, 0.15) 100%);
+  color: #ff9500;
+}
+.stat-icon.trash {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(255, 149, 0, 0.15) 100%);
+  color: var(--error);
+}
 
 .stat-info {
   display: flex;
@@ -236,7 +245,7 @@ onMounted(() => {
 
 .user-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 16px 20px;
   display: flex;
@@ -262,8 +271,8 @@ onMounted(() => {
   font-size: 0.75rem;
   padding: 4px 10px;
   border-radius: 980px;
-  background: rgba(0, 113, 227, 0.1);
-  color: var(--accent);
+  background: rgba(59, 125, 221, 0.1);
+  color: var(--color-secondary);
 }
 
 .user-role.admin {

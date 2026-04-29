@@ -288,7 +288,7 @@ onMounted(() => {
 .btn-delete-user {
   padding: 8px 16px;
   border-radius: 8px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   background: transparent;
   color: var(--error);
   cursor: pointer;
@@ -311,7 +311,7 @@ onMounted(() => {
 
 .image-card {
   background: var(--bg-card);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   overflow: hidden;
 }

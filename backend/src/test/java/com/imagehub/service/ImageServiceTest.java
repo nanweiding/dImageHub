@@ -47,12 +47,12 @@ class ImageServiceTest {
         image2.setUserId(userId);
         image2.setOriginalFilename("test2.png");
 
-        when(imageRepository.findByUserId(userId)).thenReturn(Arrays.asList(image1, image2));
+        when(imageRepository.findByUserIdAndDeleted(userId, false)).thenReturn(Arrays.asList(image1, image2));
 
-        List<Image> result = imageService.getUserImages(userId);
+        List<Image> result = imageService.getUserImages(userId, "uploadTime", "desc", 1, 20);
 
         assertEquals(2, result.size());
-        verify(imageRepository).findByUserId(userId);
+        verify(imageRepository).findByUserIdAndDeleted(userId, false);
     }
 
     @Test

@@ -23,6 +23,12 @@ public class User {
     @Column(nullable = false, length = 255)
     private String password;
 
+    @Column(nullable = false)
+    private String role = "USER"; // USER or ADMIN
+
+    @Column(nullable = false)
+    private Boolean deleted = false; // Soft delete
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 

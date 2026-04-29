@@ -73,6 +73,7 @@ class UserServiceTest {
         assertEquals("testuser", result.getUsername());
     }
 
+
     @Test
     void login_shouldThrowException_whenPasswordIncorrect() {
         User user = new User();
